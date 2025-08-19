@@ -90,3 +90,7 @@ j250819
 - MemberTest01
 - CarTest01
 - CarTest02
+- DayTest01
+- DayTest02
+- DayTest03
+- DayTest04
