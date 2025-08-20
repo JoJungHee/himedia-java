@@ -106,3 +106,5 @@ j250820
 - ImportTest02
 - ImportTest03
 - PackageTest01
+- PointTest01
+- PetTest01
