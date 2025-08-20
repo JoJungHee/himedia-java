@@ -95,3 +95,9 @@ j250819
 - DayTest03
 - DayTest04
 - DayTest05
+
+j250820
+- StaticTest01
+- XYTest01
+- XYTest02
+- RandomIdTest01
