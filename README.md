@@ -118,3 +118,5 @@ j250821
 - AnimalTest01
 - MemberTest02
 - ShapeTest01
+- AbstractTest01
+- AbstractTest02
