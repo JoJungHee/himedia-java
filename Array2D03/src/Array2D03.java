@@ -24,6 +24,9 @@ public class Array2D03 {
 		// 학생에 대한 석차 저장
 		int[] ranks = new int[scores.length];
 		
+		// 타이틀 배열
+		String[] titles = {"KOR", "ENG", "MAT", "TOT", "AVG", "GRD", "RANK"};
+		
 		// 총점, 평균 계산 - 1번 방법
 		/*
 		for(int i=0; i<scores.length; i++) {
@@ -35,14 +38,15 @@ public class Array2D03 {
 		*/
 		
 		// 총점, 평균 계산 - 2번 방법 -> 과목이 많아지게 되면 훨씬 더 효율적인 방법이 됨.
+		
 		for(int i=0; i<scores.length; i++) {
 			for(int j=0; j<3; j++) {
 				scores[i][3] += scores[i][j];
 			}
 			avgs[i] = (double)scores[i][3] / 3;
-			// 학점
 			
-			switch ((int)avgs[i] / 10) {
+			// 학점
+			switch ((int)(avgs[i] / 10)) {
 			case 10:
 			case 9:
 				grds[i] = 'A';
@@ -63,7 +67,22 @@ public class Array2D03 {
 		}
 		
 		
-		// 석차
+		// 석차 - 총점으로 석차 계산
+		// 모든 학생의 석차를 1로 초기화
+		for (int i = 0; i < ranks.length; i++) {
+			ranks[i] = 1;
+		}
+		
+		// i: 나, j: 나를 포함한 다른 학생
+		for (int i = 0; i < scores.length; i++) {
+			for (int j = 0; j < scores.length; j++) {
+				if(scores[i][3] < scores[j][3]) {
+					++ranks[i];
+				}
+			}
+		}
+		
+		/*
 		for (int i = 0; i < avgs.length; i++) {
 			int rank = 1;
 			for (int j = 0; j < avgs.length; j++) {
@@ -73,16 +92,20 @@ public class Array2D03 {
 			}
 			ranks[i] = rank;
 		}
+		*/
 		
+		// 타이틀 출력
+		System.out.printf("%3s | %3s | %3s | %3s | %3s | %5s | %2s | %4s |", "NO", titles[0], titles[1], titles[2], titles[3], titles[4], titles[5], titles[6]);
+		System.out.println("\n--------------------------------------------------");
 		
 		// 출력
+		
 		for(int i=0; i<scores.length; i++) {
+			System.out.printf("%3d | ", i + 1);
 			for(int j=0; j<scores[i].length; j++) {
 				System.out.printf("%3d | ", scores[i][j]);
 			}
-			System.out.printf("%.2f | %c | ", avgs[i], grds[i]);
-			System.out.printf("%2d | \n", ranks[i]);
-			
+			System.out.printf("%.2f | %3c | %4d | \n", avgs[i], grds[i], ranks[i]);
 		}
 		
 
