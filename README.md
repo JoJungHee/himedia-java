@@ -127,5 +127,5 @@ j250822
 - PlayerTest02
 - PlayerTest03
 - WearableTest01
-- ShapeTest01
+- ShapeTest02
 - 
