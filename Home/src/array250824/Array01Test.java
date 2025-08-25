@@ -1,7 +1,7 @@
 package array250824;
 //import java.util.Scanner;
 
-public class Array250824 {
+public class Array01Test {
 	public static void main(String[] args) {
 		
 		
