@@ -1,3 +1,4 @@
+package array250824;
 
 public class Student {
 	String name;
