@@ -162,3 +162,13 @@ j250826
 - DecimalFormatTest01
 - WrapperTest01
 - WrapperTest02
+
+j250827
+- ArraysTest01
+- VectorTest01
+- VectorTest02
+- VectorTest03
+- VectorTest04
+- VectorTest05
+- ArrayListTest01
+- ArrayListTest02
