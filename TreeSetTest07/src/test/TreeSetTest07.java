@@ -1,5 +1,6 @@
 package test;
 
+import java.util.Iterator;
 import java.util.TreeSet;
 
 import fruit.Fruit;
@@ -80,8 +81,38 @@ public class TreeSetTest07 {
 		System.out.println(set);
 		System.out.println("크기: " + set.size());
 		
+		// 6. 데이터 수정
+		// 메론의 가격을 8000, 수량을 50으로 수정
+//		set.add(new Fruit("메론", 8000, 50));	// 이미 존재하는 데이터에 값은 수정되지 않음 -> 중복을 허용하지 않음
+		for (Fruit f : set) {
+			if (f.getName().equals("메론")) {
+				f.setPrice(8000);
+				f.setVolume(50);
+			}
+		}
+		System.out.println(set);
+		System.out.println("크기: " + set.size());
+		
+		// 7-1. for-in문
+		for (Fruit f : set) {
+			System.out.println(f);
+		}
+		System.out.println("-------");
+		
+		// 7-2. forEach() + 람다식
+		set.forEach(i -> System.out.println(i));
+		System.out.println("-------");
 		
 		
+		// 7-3. forEach() + 메서드 참조 연산자
+		set.forEach(System.out::println);
+		System.out.println("-------");
+		
+		// Iterator
+		Iterator<Fruit> it = set.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
 		
 	}
 }	

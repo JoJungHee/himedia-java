@@ -22,6 +22,30 @@ public class Fruit implements Comparable<Fruit> {
 		System.out.println("과일 가격: " + price);
 		System.out.println("과일 수량: " + volume);
 	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	public void setVolume(int volume) {
+		this.volume = volume;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public int getPrice() {
+		return price;
+	}
+	
+	public int getVolume() {
+		return volume;
+	}
 
 	// ★★★★★
 	// Comparable 인터페이스의 추상 메서드인 compareTo() 메서드를 오버라이딩함
