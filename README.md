@@ -209,3 +209,21 @@ j250901
 - TreeMapTest05
 - TreeMapTest06
 - TreeMapTest07
+
+j250902
+- PropertiesTest01
+- CollectionsTest01
+- ExceptionTest01
+- ExceptionTest02
+- ExceptionTest03
+- ExceptionTest04
+- ExceptionTest05
+- ExceptionTest06
+- ExceptionTest07
+- ExceptionTest08
+- ExceptionTest09
+- ExceptionTest10
+- FileInputStreamTest01
+- FileOutputStreamTest01
+- FileReaderTest01
+- FileWriterTest01
